@@ -3,13 +3,20 @@ import random
 
 # Generate a random integer between 1 and 10 (inclusive)
 random_integer = random.randint(1, 10)
-print(random_integer)
 i = 0
 while (i<5):
-  guess2 = int(input("Enter your guess: "))
+  guess = int(input("Enter your guess: "))
   if (guess == random_integer):
     print("Your are correct")
     break
-  print("Wrong Guess. Try again. "
+    
+  if guess > random_integer:
+    number = "Smaller"
+  elif guess < random_integer:
+    number = "Larger"
+    
+  print(f"Wrong Guess. Try again. Hint: Number is {number}"
   print(f"{i=}")
   i = i + 1
+  
+print(random_integer)

@@ -1,14 +1,11 @@
-public class ExcersiseOne {
+public class A1E1 {
     public static void main(String[] args) {
-        int count = 1;
         int x = 0;
         int y = 1;
-        while(count<64) {
+        for(int i = 0; i < 32; i++) {
             System.out.println(x);
-            count++;
             x = x + y;
             System.out.println(y);
-            count++;
             y = y + x;
         }
     }
